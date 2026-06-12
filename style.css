@@ -5,14 +5,14 @@
     --text-color: #333333;
 }
 
-/* Apply background color to BOTH html and body tags */
+/* Force pink background across stubborn mobile and desktop browsers */
 html, body {
     background-color: #ffe6ea; 
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
-    padding: 0;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -25,7 +25,7 @@ body {
 /* === CARD STYLING === */
 .card {
     background: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
-    backdrop-filter: blur(10px); /* Creates a glass effect */
+    backdrop-filter: blur(10px); /* Creates the beautiful glass effect */
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -33,19 +33,35 @@ body {
     text-align: center;
     color: var(--text-color);
     
-    /* Hidden by default for JS animation */
+    /* Hidden by default for JS fade-in animation */
     opacity: 0; 
     transform: translateY(20px);
+}
+
+/* === LOGO & TITLE SIDE-BY-SIDE === */
+.title-container {
+    display: flex;
+    align-items: center;      /* Aligns logo and text perfectly in the middle vertically */
+    justify-content: center;  /* Centers the entire group inside the card */
+    gap: 15px;                /* Adds a nice gap between logo and text */
+    margin-bottom: 10px;      /* Adds space below the title section */
+}
+
+.logo {
+    width: 55px;              /* Fits beautifully next to text */
+    height: auto;             /* Keeps proportions perfect */
+    border-radius: 50%;       /* Makes your logo round if it's a square image */
 }
 
 h1 {
     color: var(--button-color);
     font-size: 2.2em;
-    margin-bottom: 5px;
+    margin: 0;                /* Resets default margins to align perfectly with the logo */
 }
 
 h2 {
     font-size: 1.5em;
+    margin-top: 15px;
     margin-bottom: 20px;
     font-weight: normal;
 }
@@ -83,24 +99,14 @@ p {
 
 .btn:hover {
     background-color: var(--button-hover);
-    transform: scale(1.05); /* Slight zoom on hover */
+    transform: scale(1.05); /* Slight pop-out zoom on hover */
     box-shadow: 0 5px 15px rgba(201, 24, 74, 0.4);
 }
 
-/* Styling for a disabled 'Back' button on the first page */
+/* Styling for the disabled 'Back' button on your first page */
 .btn.disabled {
     background-color: #cccccc;
     cursor: not-allowed;
-
-
- /* === LOGO STYLING === */
-.logo {
-    width: 80px;            /* Controls the size of your logo */
-    height: auto;           /* Keeps the image proportions perfect */
-    display: block;         /* Allows centering rules to work */
-    margin: 0 auto 15px auto; /* Centers the image and adds 15px of space below it */
-    border-radius: 50%;     /* Optional: Makes the logo circular if it's a square image */
-}   
     transform: none;
     box-shadow: none;
 }
