@@ -1,0 +1,96 @@
+/* === CUSTOMIZATION SECTION === */
+:root {
+    --button-color: #ff4d6d; 
+    --button-hover: #c9184a;
+    --text-color: #333333;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    /* Add your background image url inside the quotes below */
+    background-image: url('YOUR_BACKGROUND_IMAGE_HERE.jpg'); 
+    background-color: #ffe6ea; /* Fallback color */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* === CARD STYLING === */
+.card {
+    background: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Creates a glass effect */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    text-align: center;
+    color: var(--text-color);
+    
+    /* Hidden by default for JS animation */
+    opacity: 0; 
+    transform: translateY(20px);
+}
+
+h1 {
+    color: var(--button-color);
+    font-size: 2.2em;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: var(--button-color);
+    font-weight: bold;
+}
+
+/* === NAVIGATION BUTTONS === */
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.btn {
+    background-color: var(--button-color);
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 5px 15px rgba(201, 24, 74, 0.4);
+}
+
+/* Styling for a disabled 'Back' button on the first page */
+.btn.disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
