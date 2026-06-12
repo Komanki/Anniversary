@@ -5,6 +5,11 @@
     --text-color: #333333;
 }
 
+/* Apply background color to BOTH html and body tags */
+html, body {
+    background-color: #ffe6ea; 
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -13,9 +18,6 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
-    /* Safely apply the pink background for all devices */
-    background-color: #ffe6ea; 
     background-size: cover;
     background-position: center;
 }
