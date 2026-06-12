@@ -14,12 +14,10 @@ body {
     align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
-    /* Add your background image url inside the quotes below */
-    background-image: url('YOUR_BACKGROUND_IMAGE_HERE.jpg'); 
-    background-color: #ffe6ea; /* Fallback color */
+    /* Safely apply the pink background for all devices */
+    background-color: #ffe6ea; 
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 }
 
 /* === CARD STYLING === */
